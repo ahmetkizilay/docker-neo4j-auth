@@ -9,7 +9,10 @@ FROM tpires/neo4j
 MAINTAINER Ahmet Kizilay, ahmet.kizilay@gmail.com
 
 add launch_neo4j.sh /
+add build_auth_string.sh /
 run chmod +x /launch_neo4j.sh
+run chmod +x /build_auth_string.sh
+run apt-get install bsdmainutils -y
 
 ## turn on indexing: http://chrislarson.me/blog/install-neo4j-graph-database-ubuntu
 ## enable neo4j indexing, and set indexable keys to name,age
